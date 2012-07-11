@@ -1,7 +1,6 @@
 require 'redmine'
-require 'dispatcher'
 
-Dispatcher.to_prepare do
+ActionDispatch::Callbacks.to_prepare do
   require_dependency 'tagging_patches'
   require_dependency 'tagging_query_patch'
 

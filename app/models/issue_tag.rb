@@ -1,4 +1,5 @@
 class IssueTag < ActiveRecord::Base
+  set_primary_key :id
   belongs_to :issue
 
   def readonly?
