@@ -30,6 +30,9 @@
         <%= link_to("#{tag.gsub(/^#/, '')}",
               {:controller => "search", :action => "index", :id => project, :q => tag, :wiki_pages => true, :issues => true},
               style) %>
+        <% if Setting.plugin_redmine_tagging[:dynamic_font_size]  != "1" %>
+          </br>
+        <% end %>
       <% end %>
     </div>
   <% end %>
